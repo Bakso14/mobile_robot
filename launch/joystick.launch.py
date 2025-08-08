@@ -21,8 +21,15 @@ def generate_launch_description():
         parameters=[joy_params],
     )
 
+    serial_node = Node(
+        package='serial_node',
+        executable='node_serial_cmd_vel',
+        name='node_serial_cmd_vel'
+    )
+
 
     return LaunchDescription([
         joy_node,
-        teleop_node
+        teleop_node,
+        serial_node
     ])
