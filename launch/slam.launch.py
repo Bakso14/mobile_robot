@@ -48,7 +48,7 @@ def generate_launch_description():
         executable='robot_state_publisher',
         output='screen',
         parameters=[{'robot_description': robotDescription,
-            'use_sim_time': True}]
+            'use_sim_time': False}]
     )
 
     bridge_params = os.path.join(
@@ -74,6 +74,6 @@ def generate_launch_description():
     # LaunchDescriptionObject.add_action(gazeboLaunch)
     # LaunchDescriptionObject.add_action(spawnModelNodeGazebo)
     LaunchDescriptionObject.add_action(nodeRobotStatePublisher)
-    LaunchDescriptionObject.add_action(start_gazebo_ros_bridge_cmd)
+    # LaunchDescriptionObject.add_action(start_gazebo_ros_bridge_cmd)
 
     return LaunchDescriptionObject

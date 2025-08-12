@@ -23,8 +23,8 @@ def generate_launch_description():
 
     serial_node = Node(
         package='serial_node',
-        executable='node_serial_cmd_vel',
-        name='node_serial_cmd_vel'
+        executable='node_serial_wheel',
+        name='node_serial_wheel'
     )
 
 
